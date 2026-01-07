@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Hagios-Discipulado & Devoção</title>
+    
+    <!-- CSS modularizado -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-cross"></i> Hagios-Discipulado & Devoção</h1>
+            <p class="subtitle">Uma jornada de transformação pela contemplação de Cristo</p>
+        </header>
+
+        <main class="main-content">
+            <section class="welcome">
+                <h2>Bem-vindo ao caminho do discipulado</h2>
+                <p>Este é um espaço para você se aprofundar na revelação de Cristo Jesus. Cada módulo foi preparado para guiar sua mente, coração e prática numa jornada transformadora.</p>
+                <p class="highlight">"Uma coisa pedi ao Senhor e a buscarei: que possa morar na Casa do Senhor todos os dias da minha vida..." - Salmos 27:4</p>
+            </section>
+
+            <section class="modules-section">
+                <h2><i class="fas fa-book-open"></i> Módulos do Discipulado</h2>
+                <div class="modules-grid" id="modules-container">
+                    <!-- Os módulos serão carregados via JavaScript -->
+                </div>
+            </section>
+
+            <section class="progress-section">
+                <h2><i class="fas fa-chart-line"></i> Seu Progresso</h2>
+                <div class="progress-card">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill">0%</div>
+                    </div>
+                    <p class="progress-text">Você completou <span id="completed-count">0</span> de <span id="total-modules">0</span> módulos</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© 2023 Vá e faça Discipulos</p>
+            <p class="footer-note">"Na tua presença há plenitude de alegria" - Salmos 16:11</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

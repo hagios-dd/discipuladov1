@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo - Discipulado Contemplativo</title>
+   <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container modulo-container">
+        <!-- Cabeçalho com navegação -->
+     <header class="modulo-header">
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Voltar para Módulos
+    </a>
+    
+    <div class="modulo-title-container">
+        <h1 id="modulo-title">Carregando módulo...</h1>
+        <div class="modulo-meta">
+            <span class="modulo-status" id="modulo-status">Em andamento</span>
+            <button class="btn-mark-complete" id="btn-mark-complete">
+                <i class="far fa-check-circle"></i> Marcar como concluído
+            </button>
+        </div>
+    </div>
+    
+    <!-- Botão de tema adicionado aqui -->
+    <div class="modulo-actions">
+        <button class="theme-toggle" aria-label="Alternar tema">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+</header>
+
+        <div class="modulo-layout">
+            <!-- Menu lateral -->
+            <nav class="modulo-sidebar" id="modulo-sidebar">
+                <div class="sidebar-header">
+                    <h3><i class="fas fa-list"></i> Conteúdo do Módulo</h3>
+                </div>
+                <ul class="sidebar-menu" id="sidebar-menu">
+                    <!-- Itens serão preenchidos por JS -->
+                </ul>
+                <div class="sidebar-footer">
+                    <h4><i class="fas fa-bookmark"></i> Meu Diário</h4>
+                    <a href="#diario" class="diario-link active">
+                        <i class="fas fa-pen"></i> Minha Jornada do Discípulo
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Conteúdo principal -->
+            <main class="modulo-content" id="modulo-content">
+                <div class="loading" id="loading">
+                    <i class="fas fa-spinner fa-spin"></i> Carregando conteúdo...
+                </div>
+                <!-- O conteúdo será injetado aqui pelo JavaScript -->
+            </main>
+
+            <!-- Diário (inicialmente escondido) -->
+            <section class="modulo-diario" id="modulo-diario">
+                <div class="diario-header">
+                    <h2><i class="fas fa-pen"></i> Minha Jornada do Discípulo</h2>
+                    <button class="btn-close-diario" id="btn-close-diario">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="diario-content">
+                    <div class="diario-instructions">
+                        <p><strong>Use este espaço nas próximas duas semanas. Seja honesto.</strong></p>
+                    </div>
+                    
+                    <div class="diario-section">
+                        <h3>O QUE DEUS ESTÁ ME MOSTRANDO SOBRE ELE MESMO ATRAVÉS DESTE TEMA?</h3>
+                        <p class="diario-sub">(O que, na majestade de Cristo, ficou mais claro ou real para você?)</p>
+                        <textarea class="diario-textarea" id="diario-pergunta1" placeholder="Escreva aqui..."></textarea>
+                    </div>
+                    
+                    <div class="diario-section">
+                        <h3>O QUE ESSA REVELAÇÃO ESTÁ REVELANDO SOBRE MIM?</h3>
+                        <p class="diario-sub">(Que mentira, medo ou prioridade desordenada está vindo à tona à luz de quem Cristo é?)</p>
+                        <textarea class="diario-textarea" id="diario-pergunta2" placeholder="Escreva aqui..."></textarea>
+                    </div>
+                    
+                    <div class="diario-section">
+                        <h3>UMA DÚVIDA OU LUTA PRÁTICA QUE SURGIU E QUERO LEVAR AO NOSSO ENCONTRO:</h3>
+                        <textarea class="diario-textarea" id="diario-pergunta3" placeholder="Ex: 'Como fazer isso quando a mente vagueia?' ou 'Isso não parece muito produtivo.'"></textarea>
+                    </div>
+                    
+                    <div class="diario-section">
+                        <h3>UMA PEQUENA VITÓRIA OU INSIGHT QUE VOU CELEBRAR:</h3>
+                        <textarea class="diario-textarea" id="diario-pergunta4" placeholder="Um momento em que a 'palavra' funcionou, uma nova percepção, um peso que aliviou."></textarea>
+                    </div>
+                    
+                    <div class="diario-buttons">
+                        <button class="btn btn-save" id="btn-save-diario">
+                            <i class="fas fa-save"></i> Salvar Diário
+                        </button>
+                        <button class="btn btn-clear" id="btn-clear-diario">
+                            <i class="fas fa-trash"></i> Limpar Tudo
+                        </button>
+                    </div>
+                    
+                    <div class="diario-saved-message" id="diario-saved-message">
+                        <i class="fas fa-check-circle"></i> Diário salvo localmente!
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Navegação entre módulos -->
+        <footer class="modulo-footer">
+            <div class="modulo-navigation">
+                <button class="btn-nav" id="btn-prev-modulo">
+                    <i class="fas fa-arrow-left"></i> Módulo Anterior
+                </button>
+                <button class="btn-nav" id="btn-next-modulo">
+                    Próximo Módulo <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+            <p class="modulo-verse">"O Filho é o resplendor da glória de Deus e a expressão exata do seu ser" - Hebreus 1:3</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+  <script>
+// Este script só cuida do menu mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.createElement('button');
+    toggleBtn.className = 'sidebar-toggle';
+    toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    toggleBtn.setAttribute('aria-label', 'Abrir menu');
+    
+    const sidebarHeader = document.querySelector('.sidebar-header');
+    if (sidebarHeader) {
+        sidebarHeader.appendChild(toggleBtn);
+    }
+    
+    // O resto da lógica está no script.js principal
+});
+</script>
+</body>
+</html>
