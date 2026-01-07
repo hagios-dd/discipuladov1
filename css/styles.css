@@ -1,0 +1,25 @@
+/* ============================================
+   ARQUIVO PRINCIPAL DE ESTILOS
+   Importa todos os módulos CSS
+   ============================================ */
+
+/* 1. Variáveis de design system */
+@import '01-variables.css';
+
+/* 2. Reset e normalização */
+@import '02-reset.css';
+
+/* 3. Estilos base */
+@import '03-base.css';
+
+/* 4. Componentes reutilizáveis */
+@import '04-components.css';
+
+/* 5. Estilos específicos por módulo */
+@import '05-modules.css';
+
+/* 6. Classes utilitárias */
+@import '06-utilities.css';
+
+/* 7. Melhorias e enhancements */
+@import '07-enhancements.css';  /* ← NOVO ARQUIVO */

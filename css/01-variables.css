@@ -1,0 +1,135 @@
+/* ============================================
+   VARIÁVEIS DE DESIGN SYSTEM - ESTILO MEDITAÇÃO
+   ============================================ */
+
+:root {
+    /* ===== PALETA DE CORES PRINCIPAL ===== */
+    /* Inspirada no app de meditação - tons calmantes e serenos */
+    --color-primary: #6C63FF;      /* Lavanda suave - paz e espiritualidade */
+    --color-primary-light: #8580FF;
+    --color-primary-dark: #554FD8;
+    
+    --color-secondary: #4ECDC4;    /* Turquesa calmante - crescimento e harmonia */
+    --color-secondary-light: #6EDBD4;
+    --color-secondary-dark: #3AB0A8;
+    
+    --color-accent: #FF8E53;       /* Coral suave - energia e atenção */
+    --color-accent-light: #FFA97A;
+    --color-accent-dark: #E67E47;
+    
+    --color-success: #43C6AC;      /* Verde água - equilíbrio */
+    --color-warning: #FFD166;      /* Amarelo suave - alerta gentil */
+    --color-error: #FF6B6B;        /* Coral - erro não agressivo */
+    
+    /* ===== TONS NEUTROS SUAVES ===== */
+    --color-neutral-50: #FAFAFA;
+    --color-neutral-100: #F5F5F5;
+    --color-neutral-200: #EEEEEE;
+    --color-neutral-300: #E0E0E0;
+    --color-neutral-400: #BDBDBD;
+    --color-neutral-500: #9E9E9E;
+    --color-neutral-600: #757575;
+    --color-neutral-700: #616161;
+    --color-neutral-800: #424242;
+    --color-neutral-900: #212121;
+    
+    /* ===== TONS DE TEXTO ===== */
+    --color-text-primary: #2D3436;
+    --color-text-secondary: #636E72;
+    --color-text-tertiary: #B2BEC3;
+    --color-text-on-primary: #FFFFFF;
+    --color-text-on-secondary: #FFFFFF;
+    
+    /* ===== TONS DE FUNDO ===== */
+    --color-background: #F9F9FF;    /* Fundo azulado muito suave */
+    --color-background-card: #FFFFFF;
+    --color-background-header: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    --color-background-modal: rgba(44, 62, 80, 0.4);
+    
+    /* ===== GRADIENTES ===== */
+    --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+    --gradient-accent: linear-gradient(135deg, var(--color-accent) 0%, #FF8A65 100%);
+    
+    /* ===== SOMBRAS SUAVES ===== */
+    --shadow-sm: 0 2px 8px rgba(108, 99, 255, 0.08);
+    --shadow-md: 0 4px 16px rgba(108, 99, 255, 0.12);
+    --shadow-lg: 0 8px 32px rgba(108, 99, 255, 0.16);
+    --shadow-xl: 0 12px 48px rgba(108, 99, 255, 0.2);
+    
+    /* ===== BORDAS ARREDONDADAS ===== */
+    --border-radius-sm: 12px;
+    --border-radius-md: 20px;
+    --border-radius-lg: 28px;
+    --border-radius-xl: 36px;
+    --border-radius-circle: 50%;
+    
+    /* ===== ESPAÇAMENTOS GENEROSOS ===== */
+    --space-xs: 0.5rem;    /* 8px */
+    --space-sm: 1rem;      /* 16px */
+    --space-md: 1.5rem;    /* 24px */
+    --space-lg: 2rem;      /* 32px */
+    --space-xl: 3rem;      /* 48px */
+    --space-2xl: 4rem;     /* 64px */
+    
+    /* ===== TIPOGRAFIA SUAVE ===== */
+    --font-family-base: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-family-heading: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    
+    --font-size-xs: 0.8125rem;   /* 13px */
+    --font-size-sm: 0.9375rem;   /* 15px */
+    --font-size-md: 1rem;        /* 16px */
+    --font-size-lg: 1.125rem;    /* 18px */
+    --font-size-xl: 1.25rem;     /* 20px */
+    --font-size-2xl: 1.5rem;     /* 24px */
+    --font-size-3xl: 1.875rem;   /* 30px */
+    --font-size-4xl: 2.25rem;    /* 36px */
+    
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.7;
+    
+    /* ===== TRANSITIONS SUAVES ===== */
+    --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* ===== OUTRAS VARIÁVEIS ===== */
+    --container-max-width: 1200px;
+    --header-height: 72px;
+    --button-height: 56px;
+    --input-height: 56px;
+}
+
+/* ===== TEMA ESCURO - NOITE SERENA ===== */
+[data-theme="dark"] {
+    --color-primary: #7C73FF;
+    --color-primary-light: #958DFF;
+    --color-primary-dark: #635BDF;
+    
+    --color-secondary: #5ADBD2;
+    --color-secondary-light: #7BE9E1;
+    --color-secondary-dark: #48C2BA;
+    
+    --color-accent: #FF9A6B;
+    --color-accent-light: #FFB595;
+    --color-accent-dark: #E8845A;
+    
+    --color-text-primary: #F0F0F0;
+    --color-text-secondary: #B0B0B0;
+    --color-text-tertiary: #808080;
+    
+    --color-background: #0A0E17;
+    --color-background-card: #1A1F2E;
+    --color-background-header: linear-gradient(135deg, #1A1F2E 0%, #2D3748 100%);
+    
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
